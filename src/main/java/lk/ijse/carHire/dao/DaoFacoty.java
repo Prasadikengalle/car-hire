@@ -1,5 +1,6 @@
 package lk.ijse.carHire.dao;
 
+import lk.ijse.carHire.dao.custom.impl.CategoryDaoImpl;
 import lk.ijse.carHire.dao.custom.impl.CustomerDaoImpl;
 
 public class DaoFacoty {
@@ -8,6 +9,9 @@ public class DaoFacoty {
         switch (type){
             case CUSTOMER :
                 return (T) new CustomerDaoImpl();
+
+            case CATEGORY :
+                return (T) new CategoryDaoImpl();
 
             default :
                 return  null;
