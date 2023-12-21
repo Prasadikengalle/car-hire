@@ -3,6 +3,7 @@ package lk.ijse.carHire.dao;
 import lk.ijse.carHire.dao.custom.impl.CarDaoImpl;
 import lk.ijse.carHire.dao.custom.impl.CategoryDaoImpl;
 import lk.ijse.carHire.dao.custom.impl.CustomerDaoImpl;
+import lk.ijse.carHire.dao.custom.impl.RentDaoImpl;
 
 public class DaoFacoty {
 
@@ -16,6 +17,9 @@ public class DaoFacoty {
 
             case CAR :
                 return (T) new CarDaoImpl();
+
+            case RENT :
+                return (T) new RentDaoImpl();
             default :
                 return  null;
 
