@@ -1,5 +1,5 @@
 package lk.ijse.carHire.business;
 
 public enum BoType {
-    CUSTOMER, CATEGORY
+    CUSTOMER, CATEGORY, CAR
 }

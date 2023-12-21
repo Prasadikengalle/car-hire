@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="563.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carHire.controller.CarFormController">
+   <children>
+      <Label layoutX="273.0" layoutY="32.0" text="Car Manage" textFill="#1e3799">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="84.0" layoutY="84.0" onAction="#txtIdOnAction" prefHeight="25.0" prefWidth="159.0" promptText="Car Id" />
+      <Button layoutX="84.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #00a8ff;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="174.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #C4E538;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="364.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #4cd137;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="266.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #EE5A24;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableCar" layoutX="28.0" layoutY="314.0" onMouseClicked="#btnOnMouseCllicked" prefHeight="200.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="96.0" text="Car ID " />
+            <TableColumn fx:id="colMake" prefWidth="105.0" text="Make" />
+            <TableColumn fx:id="colModel" prefWidth="125.0" text="Model" />
+            <TableColumn fx:id="colYear" prefWidth="91.0" text="Year" />
+            <TableColumn fx:id="colRental" prefWidth="110.0" text="Daily Rental" />
+            <TableColumn fx:id="colAvailable" prefWidth="94.0" text="Availabillity" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <TextField fx:id="txtPlate" layoutX="84.0" layoutY="125.0" prefHeight="25.0" prefWidth="159.0" promptText="License Plate" />
+      <ComboBox fx:id="cmbCategoryId" layoutX="313.0" layoutY="84.0" onAction="#cmbSuppllierIdOnAction" prefWidth="150.0" promptText="Category">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <TextField fx:id="txtMake" layoutX="84.0" layoutY="163.0" prefHeight="25.0" prefWidth="159.0" promptText="Make" />
+      <TextField fx:id="txtModel" layoutX="313.0" layoutY="163.0" prefHeight="25.0" prefWidth="118.0" promptText="Model" />
+      <TextField fx:id="txtYear" layoutX="313.0" layoutY="125.0" prefHeight="25.0" prefWidth="118.0" promptText="Year" />
+      <TextField fx:id="txtRental" layoutX="84.0" layoutY="204.0" prefHeight="25.0" prefWidth="159.0" promptText="Daily Rental" />
+      <ComboBox fx:id="comboAvialablity" layoutX="313.0" layoutY="204.0" prefHeight="25.0" prefWidth="118.0" promptText="Availability">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label fx:id="labelCategoryName" layoutX="514.0" layoutY="84.0" prefHeight="25.0" prefWidth="100.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="30.0" layoutY="36.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #747d8c;" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
