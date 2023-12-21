@@ -1,9 +1,6 @@
 package lk.ijse.carHire.business;
 
-import lk.ijse.carHire.business.custom.impl.CarBoImpl;
-import lk.ijse.carHire.business.custom.impl.CategoryBoImpl;
-import lk.ijse.carHire.business.custom.impl.CustomerBoImpl;
-import lk.ijse.carHire.business.custom.impl.RentBoImpl;
+import lk.ijse.carHire.business.custom.impl.*;
 
 public class BoFactory {
 
@@ -21,6 +18,9 @@ public class BoFactory {
 
             case RENT :
                 return (T) new RentBoImpl();
+
+            case RETURN :
+                return (T) new ReturnBoImpl();
 
             default:
                 return null;

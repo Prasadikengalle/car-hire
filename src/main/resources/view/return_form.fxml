@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="563.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.carHire.controller.ReturnFormController">
+   <children>
+      <Label layoutX="257.0" layoutY="33.0" text="Return a Car" textFill="#1e3799">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCarId" editable="false" layoutX="92.0" layoutY="168.0" onAction="#txtIdOnAction" prefHeight="25.0" prefWidth="174.0" promptText="Car Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Button layoutX="352.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnReturnOnAction" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #C4E538;" text="Return Car">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="488.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #4cd137;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tableReturn" layoutX="28.0" layoutY="314.0" onMouseClicked="#btnOnMouseCllicked" prefHeight="200.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="130.0" text="Return Id" />
+            <TableColumn fx:id="colRent" prefWidth="216.0" text="Rental Id" />
+            <TableColumn fx:id="colCar" minWidth="0.0" prefWidth="124.0" text="Car Id" />
+            <TableColumn fx:id="colFee" minWidth="0.0" prefWidth="151.0" text="Fees" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button layoutX="38.0" layoutY="46.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: #747d8c;" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtFees" editable="false" layoutX="386.0" layoutY="168.0" prefHeight="25.0" prefWidth="174.0" promptText="Fees">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <TextField fx:id="txtId" layoutX="92.0" layoutY="109.0" prefHeight="25.0" prefWidth="174.0" promptText="Return Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <ComboBox fx:id="cmbRentalId" layoutX="386.0" layoutY="109.0" onAction="#cmbOnAction" prefHeight="25.0" prefWidth="174.0" promptText="Rental Id">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+   </children>
+</AnchorPane>

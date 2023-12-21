@@ -1,9 +1,7 @@
 package lk.ijse.carHire.dao;
 
-import lk.ijse.carHire.dao.custom.impl.CarDaoImpl;
-import lk.ijse.carHire.dao.custom.impl.CategoryDaoImpl;
-import lk.ijse.carHire.dao.custom.impl.CustomerDaoImpl;
-import lk.ijse.carHire.dao.custom.impl.RentDaoImpl;
+import lk.ijse.carHire.business.custom.impl.ReturnBoImpl;
+import lk.ijse.carHire.dao.custom.impl.*;
 
 public class DaoFacoty {
 
@@ -20,6 +18,10 @@ public class DaoFacoty {
 
             case RENT :
                 return (T) new RentDaoImpl();
+
+            case RETURN :
+                return (T) new ReturnDaoImpl();
+
             default :
                 return  null;
 
